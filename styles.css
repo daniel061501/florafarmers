@@ -1,0 +1,518 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Landing Section Styles */
+.landing-section {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="%23654321"/><path d="M0 400 Q300 350 600 400 T1200 400" stroke="%2388B04B" stroke-width="3" fill="none"/><circle cx="200" cy="300" r="50" fill="%2388B04B" opacity="0.7"/><circle cx="800" cy="250" r="40" fill="%2388B04B" opacity="0.7"/><circle cx="1000" cy="350" r="45" fill="%2388B04B" opacity="0.7"/></svg>');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.landing-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.landing-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.button-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #88B04B, #6B8E23);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #6B8E23, #556B2F);
+}
+
+.back-btn {
+    background: #8B4513;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #A0522D;
+    transform: translateY(-2px);
+}
+
+/* Content Sections */
+.content-section {
+    display: none;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #F5F5DC, #E6E6FA);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: #2F4F2F;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(135deg, #88B04B, #6B8E23);
+}
+
+/* About Section Styles */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.about-card h3 {
+    color: #2F4F2F;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.about-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.about-card ul li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.about-card ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #88B04B;
+    font-weight: bold;
+}
+
+/* Projects Section Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-icon {
+    font-size: 3rem;
+    color: #88B04B;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: #2F4F2F;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.project-status {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.status-badge.ongoing {
+    background: #FFE4B5;
+    color: #8B4513;
+}
+
+.status-badge.planning {
+    background: #E0E0E0;
+    color: #333;
+}
+
+.status-badge.completed {
+    background: #90EE90;
+    color: #2F4F2F;
+}
+
+.project-timeline {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Products Section Styles */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-icon {
+    font-size: 3rem;
+    color: #88B04B;
+    margin-bottom: 1rem;
+}
+
+.product-card h3 {
+    color: #2F4F2F;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.product-features {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature-tag {
+    background: #F0F8FF;
+    color: #2F4F2F;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-btn {
+        width: 250px;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .about-content,
+    .projects-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content h1 {
+        font-size: 2rem;
+    }
+    
+    .landing-content {
+        padding: 1rem;
+    }
+    
+    .nav-btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* Organizational Chart Styles */
+.org-chart-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+.org-chart-section h3 {
+    text-align: center;
+    color: #2F4F2F;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.org-level {
+    margin-bottom: 3rem;
+}
+
+.org-level h4 {
+    color: #2F4F2F;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #88B04B;
+    padding-bottom: 0.5rem;
+}
+
+/* Board of Directors Styles */
+.board-directors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.director-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 200px;
+}
+
+.director-card.chairman {
+    background: linear-gradient(135deg, #2F4F2F, #88B04B);
+    color: white;
+}
+
+.director-card.vice-chairman {
+    background: linear-gradient(135deg, #88B04B, #6B8E23);
+    color: white;
+}
+
+.directors-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.director-card .position {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2F4F2F;
+}
+
+.director-card.chairman .position,
+.director-card.vice-chairman .position {
+    color: white;
+}
+
+.director-card .name {
+    font-size: 1rem;
+    color: #666;
+}
+
+.director-card.chairman .name,
+.director-card.vice-chairman .name {
+    color: #f0f0f0;
+}
+
+/* Committees Styles */
+.committees-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.committee-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.committee-card h5 {
+    color: #2F4F2F;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+.committee-members .member {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Management Staff Styles */
+.management-staff {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.staff-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.staff-card .position {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #2F4F2F;
+}
+
+.staff-card .name {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-out {
+    animation: slideOut 0.3s ease-out;
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Design for Organizational Chart */
+@media (max-width: 768px) {
+    .directors-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .committees-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .management-staff {
+        grid-template-columns: 1fr;
+    }
+    
+    .org-chart-section {
+        padding: 1rem;
+    }
+}
